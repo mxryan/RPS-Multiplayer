@@ -1,0 +1,6 @@
+#chat-room {
+  height: 300px;
+  overflow: scroll;
+  border: 3px solid black;
+  width: 400px;
+}

@@ -20,7 +20,13 @@ firebase.initializeApp(config);
 const db = firebase.database();
 const root = "/rps_multiplayer";
 
-//AUTH
-const provider = new firebase.auth.GoogleAuthProvider();
-firebase.auth().signInWithRedirect(provider);
+//GOOGLE AUTH
+// const provider = new firebase.auth.GoogleAuthProvider();
+// firebase.auth().signInWithRedirect(provider);
 
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
